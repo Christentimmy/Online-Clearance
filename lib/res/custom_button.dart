@@ -1,9 +1,8 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:schoolclearance/res/color.dart';
 
+// ignore: must_be_immutable
 class CustomButton extends StatelessWidget {
   final String text;
   IconData? icon;

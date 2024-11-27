@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:schoolclearance/pages/home_screen.dart';
+import 'package:schoolclearance/pages/profile_screen.dart';
 import 'package:schoolclearance/res/color.dart';
 
 class BottomNavigationScreen extends StatelessWidget {
@@ -11,7 +12,7 @@ class BottomNavigationScreen extends StatelessWidget {
   final _pages = [
     HomeScreen(),
     Container(color: Colors.blue),
-    Container(color: Colors.red),
+    ProfileScreen(),
   ];
 
   @override

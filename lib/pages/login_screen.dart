@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:schoolclearance/pages/bottom_navigation_screen.dart';
-import 'package:schoolclearance/pages/home_screen.dart';
 import 'package:schoolclearance/res/color.dart';
 import 'package:schoolclearance/res/custom_button.dart';
 import 'package:schoolclearance/res/custom_textfield.dart';
