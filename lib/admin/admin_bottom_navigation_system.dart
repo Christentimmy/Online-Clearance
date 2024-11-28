@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:schoolclearance/admin/admin_home_page_screen.dart';
 import 'package:schoolclearance/admin/admin_students_document_screen.dart';
 import 'package:schoolclearance/pages/documents_screen.dart';
 import 'package:schoolclearance/pages/home_screen.dart';
 import 'package:schoolclearance/pages/profile_screen.dart';
 import 'package:schoolclearance/res/color.dart';
 
-class BottomNavigationScreen extends StatelessWidget {
-  BottomNavigationScreen({super.key});
+class AdminBottomNavigationSystem extends StatelessWidget {
+  AdminBottomNavigationSystem({super.key});
 
   final RxInt _selectedIndex = 0.obs;
 
   final _pages = [
-    HomeScreen(),
+    AdminHomePageScreen(),
     AdminStudentsDocumentScreen(),
-    ProfileScreen(),
+    Container(),
   ];
 
   @override

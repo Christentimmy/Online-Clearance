@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:schoolclearance/admin/admin_bottom_navigation_system.dart';
 import 'package:schoolclearance/admin/admin_home_page_screen.dart';
 import 'pages/splash_screen.dart';
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         splashFactory: NoSplash.splashFactory,
         splashColor: Colors.transparent,
       ),
-      home: const AdminHomePageScreen(),
+      home: AdminBottomNavigationSystem(),
     );
   }
 }
