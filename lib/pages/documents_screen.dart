@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:schoolclearance/pages/library_fines_screen.dart';
 
+// ignore: must_be_immutable
 class DocumentsScreen extends StatelessWidget {
   DocumentsScreen({super.key});
 
@@ -14,6 +16,19 @@ class DocumentsScreen extends StatelessWidget {
     "Medical",
     "Exams and Records",
   ];
+
+  Map<String, VoidCallback> eachCardFunction = {
+    "Library Fines": () {
+      Get.to(() => LibraryFinesScreen());
+    },
+    "Student Accounts": () {},
+    "Workshop": () {},
+    "Departmental Clearance": () {},
+    "Hostel": () {},
+    "Accomodation Faculty": () {},
+    "Medical": () {},
+    "Exams and Records": () {},
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -50,6 +65,11 @@ class DocumentsScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: ListTile(
+                      onTap: () {
+                        if (eachCardFunction.containsKey(_sections[index])) {
+                          eachCardFunction[_sections[index]]?.call();
+                        }
+                      },
                       leading: const Icon(
                         Icons.document_scanner_sharp,
                         color: Colors.white,

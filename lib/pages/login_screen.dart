@@ -16,48 +16,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: PreferredSize(
-        preferredSize: Size(Get.width, 150),
-        child: Container(
-          height: 150,
-          padding: const EdgeInsets.only(top: 45),
-          color: AppColors.textFormFieldBgColor,
-          child: Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                // Leading widget
-                GestureDetector(
-                  onTap: () => Get.back(),
-                  child: Container(
-                    height: 44,
-                    width: 44,
-                    alignment: Alignment.center,
-                    margin: const EdgeInsets.symmetric(
-                      horizontal: 17,
-                      vertical: 10,
-                    ),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      color: const Color(0xffFBFBFB),
-                    ),
-                    child: const Icon(
-                      Icons.arrow_back_ios,
-                      size: 14,
-                      color: Colors.black,
-                    ),
-                  ),
-                ),
-                // Title
-
-                // Actions widget
-              ],
-            ),
-          ),
-        ),
-      ),
+      backgroundColor: Colors.black,
       body: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 20,
@@ -67,12 +26,12 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: Get.height * 0.05),
+              SizedBox(height: Get.height * 0.2),
               const Text(
                 "Hi, welcome back",
                 style: TextStyle(
                   fontSize: 24,
-                  color: Colors.black,
+                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -81,7 +40,7 @@ class LoginScreen extends StatelessWidget {
                 "Please enter your details to continue.",
                 style: TextStyle(
                   fontSize: 16,
-                  color: const Color(0xff000000).withOpacity(0.5),
+                  color: Colors.white.withOpacity(0.5),
                 ),
               ),
               SizedBox(height: Get.height * 0.05),
@@ -94,7 +53,7 @@ class LoginScreen extends StatelessWidget {
                       "Matric Number",
                       style: TextStyle(
                         fontSize: 16,
-                        color: const Color(0xff000000).withOpacity(0.75),
+                        color: Colors.white.withOpacity(0.75),
                       ),
                     ),
                     const SizedBox(height: 5),
@@ -107,7 +66,7 @@ class LoginScreen extends StatelessWidget {
                       "Password",
                       style: TextStyle(
                         fontSize: 16,
-                        color: const Color(0xff000000).withOpacity(0.75),
+                        color: Colors.white.withOpacity(0.75),
                       ),
                     ),
                     const SizedBox(height: 5),
@@ -146,6 +105,7 @@ class LoginScreen extends StatelessWidget {
                   Obx(
                     () => Checkbox(
                       activeColor: AppColors.buttonColor,
+                      side: const BorderSide(color: Colors.white),
                       visualDensity: VisualDensity.compact,
                       materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                       value: _isValue.value,
@@ -157,7 +117,7 @@ class LoginScreen extends StatelessWidget {
                   Text(
                     "Admin",
                     style: TextStyle(
-                      color: const Color(0xff000000).withOpacity(0.5),
+                      color: Colors.white.withOpacity(0.5),
                     ),
                   )
                 ],
@@ -166,7 +126,7 @@ class LoginScreen extends StatelessWidget {
               CustomButton(
                 text: "Log in",
                 onTap: () {
-                  Get.to(()=> BottomNavigationScreen());
+                  Get.to(() => BottomNavigationScreen());
                 },
               ),
             ],

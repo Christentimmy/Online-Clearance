@@ -91,7 +91,7 @@ class HomeScreen extends StatelessWidget {
                     mainAxisSpacing: 10, // Vertical spacing
                     crossAxisSpacing: 10, // Horizontal spacing
                     childAspectRatio:
-                        5, // Adjust to limit height; width-to-height ratio
+                        2.5, // Adjust to limit height; width-to-height ratio
                   ),
                   itemBuilder: (context, index) {
                     return Container(
