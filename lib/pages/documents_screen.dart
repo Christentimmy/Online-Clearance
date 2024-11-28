@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:schoolclearance/pages/library_fines_screen.dart';
+import 'package:schoolclearance/pages/student_accounts.dart';
 
 // ignore: must_be_immutable
 class DocumentsScreen extends StatelessWidget {
@@ -21,7 +22,9 @@ class DocumentsScreen extends StatelessWidget {
     "Library Fines": () {
       Get.to(() => LibraryFinesScreen());
     },
-    "Student Accounts": () {},
+    "Student Accounts": () {
+      Get.to(() => StudentAccounts());
+    },
     "Workshop": () {},
     "Departmental Clearance": () {},
     "Hostel": () {},
