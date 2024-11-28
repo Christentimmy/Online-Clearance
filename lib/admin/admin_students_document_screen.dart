@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:schoolclearance/admin/student_documents_screen.dart';
 
 class AdminStudentsDocumentScreen extends StatelessWidget {
   AdminStudentsDocumentScreen({super.key});
@@ -39,6 +41,11 @@ class AdminStudentsDocumentScreen extends StatelessWidget {
                 itemCount: _students.length,
                 itemBuilder: (context, index) {
                   return ListTile(
+                    onTap: () {
+                      Get.to(
+                        () => StudentDocumentsScreen(name: _students[index]),
+                      );
+                    },
                     leading: const Icon(
                       Icons.document_scanner_outlined,
                       color: Colors.grey,
@@ -49,7 +56,8 @@ class AdminStudentsDocumentScreen extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    trailing: const Icon(Icons.arrow_forward_ios, color: Colors.grey),
+                    trailing:
+                        const Icon(Icons.arrow_forward_ios, color: Colors.grey),
                   );
                 },
               ),
