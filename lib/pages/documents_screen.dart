@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:schoolclearance/pages/accomodation_faculty_screen.dart';
+import 'package:schoolclearance/pages/deparemental_clearance_screen.dart';
+import 'package:schoolclearance/pages/exams_and_records_screen.dart';
+import 'package:schoolclearance/pages/hostel_screen.dart';
 import 'package:schoolclearance/pages/library_fines_screen.dart';
+import 'package:schoolclearance/pages/medical_screen.dart';
 import 'package:schoolclearance/pages/student_accounts.dart';
+import 'package:schoolclearance/pages/workshop_screen.dart';
 
 // ignore: must_be_immutable
 class DocumentsScreen extends StatelessWidget {
@@ -25,12 +31,24 @@ class DocumentsScreen extends StatelessWidget {
     "Student Accounts": () {
       Get.to(() => StudentAccounts());
     },
-    "Workshop": () {},
-    "Departmental Clearance": () {},
-    "Hostel": () {},
-    "Accomodation Faculty": () {},
-    "Medical": () {},
-    "Exams and Records": () {},
+    "Workshop": () {
+       Get.to(() => WorkshopScreen());
+    },
+    "Departmental Clearance": () {
+       Get.to(() => DeparementalClearanceScreen());
+    },
+    "Hostel": () {
+       Get.to(() => HostelScreen());
+    },
+    "Accomodation Faculty": () {
+       Get.to(() => AccomodationFacultyScreen());
+    },
+    "Medical": () {
+       Get.to(() => MedicalScreen());
+    },
+    "Exams and Records": () {
+       Get.to(() => ExamsAndRecordsScreen());
+    },
   };
 
   @override

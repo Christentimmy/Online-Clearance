@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:schoolclearance/admin/admin_home_page_screen.dart';
 import 'pages/splash_screen.dart';
 
 void main() {
@@ -17,7 +17,6 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -25,8 +24,7 @@ class MyApp extends StatelessWidget {
         splashFactory: NoSplash.splashFactory,
         splashColor: Colors.transparent,
       ),
-      home: const SplashScreen(),
+      home: const AdminHomePageScreen(),
     );
   }
 }
-
